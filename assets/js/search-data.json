@@ -49,6 +49,17 @@
   
 
   
+      ,"page2": {
+          "title": "Design",
+          "content": "Design .",
+          "url": "https://100developer.github.io/blog100d/design/",
+          "relUrl": "/design/",
+          "date": ""
+      }
+      
+  
+
+  
 
   
   
@@ -70,7 +81,7 @@
   
 
   
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://100developer.github.io/blog100d/robots.txt",
