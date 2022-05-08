@@ -16,4 +16,4 @@ permalink: /about/
 > 2018년 웹어워드 어학부분 대상 수상작 기획, 디자인 및 개발
 
 ---
-![이력서](/images/resume.png)
+![이력서]({{site.baseurl}}/images/resume.png)
