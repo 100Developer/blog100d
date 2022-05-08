@@ -14,7 +14,7 @@ permalink: /about/
 > 2018년 웹어워드 어학부분 대상 수상작 기획, 디자인 및 개발
 
 
-![Alt text](./images/resume.png)
+![Alt text](/images/resume.png)
 
 ## 스페이드컴퍼니, Dev Team/ Pub Senior, Plan Senior - 2020.05 ~ 21.05 ( 1년 )
 • 디지털 트랜스포메이션 : 디지털 전시 [ 퍼블, 기획, PM ] ( 기여도 30% )
