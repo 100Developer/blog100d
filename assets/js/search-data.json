@@ -2,6 +2,17 @@
   
     
         "post0": {
+            "title": "github blog 포스트 쓰기",
+            "content": "github blog 포스트 . 💻 github 로그인하고 진행 . . code &gt; _posts . . . default 파일 &gt; Raw 파일 클릭 &gt; 전체 복사 . . . . _posts 클릭 &gt; Add file 클릭 &gt; yyyy-mm-dd-제목.md &gt; 붙여넣기 . . 타이틀 / 카테고리 변경 . . 마크다운 쓰는 법 . 🔗 markdown . . commit new file . . . . 포스팅 완성 . . . tag 검색 . .",
+            "url": "https://100developer.github.io/blog100d/github/blog/2022/05/15/github_blog_Post.html",
+            "relUrl": "/github/blog/2022/05/15/github_blog_Post.html",
+            "date": " • May 15, 2022"
+        }
+        
+    
+  
+    
+        ,"post1": {
             "title": "github blog 메뉴 만들기",
             "content": "github blog 메뉴 . 💻 github 로그인하고 진행 . . 메뉴 페이지 수정 . . about.md 클릭 🖱 . . 펜모양 클릭 🖱 . . 마크다운 문법으로 수정 . 🔗 markdown . 수정완료후, commit changes . . . 메뉴 추가 ( _pages에서) . Add file &gt; create new file . . layout: page title: About Me (해당 md 파일명) permalink: /about/ (해당 link) . 해당 md 파일에서 상위 code 입력 . . 추후, commit new file . .",
             "url": "https://100developer.github.io/blog100d/github/blog/2022/05/15/github_blog_Menu.html",
@@ -12,7 +23,7 @@
     
   
     
-        ,"post1": {
+        ,"post2": {
             "title": "github blog 생성하기",
             "content": "fastpages로 github blog 생성 . 💻 github 로그인하고 진행 . . google에서 fastpage 검색 🔎 . 🔗 fastpages . . Setup instructions 클릭 🖱 . . . on this link 클릭 🖱 . 🔗 github Generate . . Repository 생성(create) . . . Setting &gt; Action &gt; New secret &gt; SSH . 🔗 8gwifi.org . . . . . Deploy keys(Allow write access) . . . . . Settings &gt; Actions &gt; General . . . . Actions &gt; initial commit Setup #1 &gt; Re-run jobs . . . . . . Pull requests &gt; Initial Setup &gt; Merge pull request . . . . . Done . .",
             "url": "https://100developer.github.io/blog100d/github/blog/2022/05/15/github_blog_Generate.html",
