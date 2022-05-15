@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "github blog 생성하기",
-            "content": "fastpages로 github blog 생성 . 💻 github 로그인하고 진행 . . google에서 fastpage 🔎 검색 . fastpages . . Setup instructions 🖱 클릭 . . . on this link 🖱 클릭 . github Generate .",
+            "content": "fastpages로 github blog 생성 . 💻 github 로그인하고 진행 . . google에서 fastpage 검색 🔎 . 🔗 fastpages . . Setup instructions 클릭 🖱 . . . on this link 클릭 🖱 . 🔗 github Generate . . Repository 생성(create) . . . Setting &gt; Action &gt; New secret &gt; SSH . 🔗 8gwifi.org . . . . . Deploy keys(Allow write access) . . . . . Settings &gt; Actions &gt; General . . . . Actions &gt; initial commit Setup #1 &gt; Re-run jobs . . . . . . Pull requests &gt; Initial Setup &gt; Merge pull request . . . . . Done . .",
             "url": "https://100developer.github.io/blog100d/github/blog/2022/05/15/github_blog_Generate.html",
             "relUrl": "/github/blog/2022/05/15/github_blog_Generate.html",
             "date": " • May 15, 2022"
