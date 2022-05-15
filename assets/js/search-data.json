@@ -1,11 +1,22 @@
 {
   
+    
+        "post0": {
+            "title": "github blog 생성하기",
+            "content": "fastpages로 github blog 생성 . google에서 fastpage 검색 . .",
+            "url": "https://100developer.github.io/blog100d/github/blog/2022/05/15/github_blog_Generate.html",
+            "relUrl": "/github/blog/2022/05/15/github_blog_Generate.html",
+            "date": " • May 15, 2022"
+        }
+        
+    
+  
 
   
   
 
   
-      "page1": {
+      ,"page1": {
           "title": "About Me",
           "content": "안녕하세요! . 백규진입니다. . 신규 이러닝 시스템 및 교육관련 홈페이지 UI/UX [ 기획, 설계, 개발 ] . 웹에이전시에서 다수 프로젝트 진행 [ 50여 홈페이지 개발 ] . 2018년 웹어워드 어학부분 대상 수상작 기획, 디자인 및 개발 . . .",
           "url": "https://100developer.github.io/blog100d/about/",
