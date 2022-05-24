@@ -2,6 +2,17 @@
   
     
         "post0": {
+            "title": "SASS 문법",
+            "content": "주석 . // 컴파일되지 않는 주석 /* 컴파일되는 주석 */ . . 중첩 . .btn{ position:absolute; &amp;.action{ color:red; } } . . 중첩 벗어나기 . .list{ $w:100px; $h:50px; li{ width:$w; height:$h; } @at-root .box{ width:$w; height:$h; } } . . 중첩된 속성 . .box{ font:{ weight:bold; size:10px; family:sans-serif; }; margin: { top:10px; left:20px; }; padding: { bottom:40px; right:30px; } } .",
+            "url": "https://100developer.github.io/blog100d/sass/syntax/2022/05/24/SASS_syntax.html",
+            "relUrl": "/sass/syntax/2022/05/24/SASS_syntax.html",
+            "date": " • May 24, 2022"
+        }
+        
+    
+  
+    
+        ,"post1": {
             "title": "실무에 필요한 UX,UI 용어",
             "content": "Fidelity . 충실도, 묘사 / 표현의 정도를 나타냄 . Low Fidelity : 최소한의 구성요소는 다 갖추고 있는 정보 | High Fidelity : 완성에 거의 가까운 형태 | . . Wireframe . 기획단계에서 주로 제작되며, 각 페이지들의 정보와 UI 요소등에 대한 배치를 표현한다. 와이어프레임에 시나리오, 컨텐츠 설명 등이 첨부되면 스토리보드가 된다. . . Storyboard . 서비스의 각 페이지 구성요소나 콘텐츠의 설명 및 페이지간의 이동 흐름, 로직 등을 기술한 문서를 말한다. = 화면설계서, UI문서, 스펙문서, 기획서 . . Mockup . 디자인, 데모 시연 및 평가를 위한 서비스. 제품의 디자인, 일반적으로 최종 버전의 디자인이 되는 경우도 많다 . . Prototype . 서비스에 대한 기능 및 사용성 등의 테스트를 위해 제작되는 동적인 모형, 개발 디자이너 사이의 시각적인 커뮤니케이션 툴이 되기도 하고 사용성 테스트에 종종 사용되기도 한다. . . Affordance . 사용자가 제품 또는 서비스를 인지했을때 어떻게 사용해야 하는지 알거나 디자이너의 의도대로 사용자의 행동을 유도하는 것을 의미 . . IA (Information Architecture) . 제품, 서비스를 구성하는 정보의 구조와 우선순위, 흐름의 설계 등을 포함 .",
             "url": "https://100developer.github.io/blog100d/ux/ui/2022/05/23/UX_term.html",
@@ -12,7 +23,7 @@
     
   
     
-        ,"post1": {
+        ,"post2": {
             "title": "UX,UI 참고자료",
             "content": "UX UI 참고사이트 . 🔗 co.design : 최신 디자인 뉴스 . 🔗 Medium : 영어 아티클 플랫폼 . 🔗 Techcrunch : 최신 Tech 뉴스 . . UX UI 참고서적 . 디자인과 인간심리 . 사용자를 생각하게 하지마! .",
             "url": "https://100developer.github.io/blog100d/ux/ui/%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C/2022/05/23/UX_resource.html",
@@ -23,7 +34,7 @@
     
   
     
-        ,"post2": {
+        ,"post3": {
             "title": "github blog 포스트 쓰기",
             "content": "github blog 포스트 . 💻 github 로그인하고 진행 . . code &gt; _posts . . . default 파일 &gt; Raw 파일 클릭 &gt; 전체 복사 . . . . _posts 클릭 &gt; Add file 클릭 &gt; yyyy-mm-dd-제목.md &gt; 붙여넣기 . . 타이틀 / 카테고리 변경 . . 마크다운 쓰는 법 . 🔗 markdown . . commit new file . . . . 포스팅 완성 . . . tag 검색 . .",
             "url": "https://100developer.github.io/blog100d/github/blog/2022/05/15/github_blog_Post.html",
@@ -34,7 +45,7 @@
     
   
     
-        ,"post3": {
+        ,"post4": {
             "title": "github blog 메뉴 만들기",
             "content": "github blog 메뉴 . 💻 github 로그인하고 진행 . . 메뉴 페이지 수정 . . about.md 클릭 🖱 . . 펜모양 클릭 🖱 . . 마크다운 문법으로 수정 . 🔗 markdown . 수정완료후, commit changes . . . 메뉴 추가 ( _pages에서) . Add file &gt; create new file . . layout: page title: About Me (해당 md 파일명) permalink: /about/ (해당 link) . 해당 md 파일에서 상위 code 입력 . . 추후, commit new file . .",
             "url": "https://100developer.github.io/blog100d/github/blog/2022/05/15/github_blog_Menu.html",
@@ -45,7 +56,7 @@
     
   
     
-        ,"post4": {
+        ,"post5": {
             "title": "github blog 생성하기",
             "content": "fastpages로 github blog 생성 . 💻 github 로그인하고 진행 . . google에서 fastpage 검색 🔎 . 🔗 fastpages . . Setup instructions 클릭 🖱 . . . on this link 클릭 🖱 . 🔗 github Generate . . Repository 생성(create) . . . Setting &gt; Action &gt; New secret &gt; SSH . 🔗 8gwifi.org . . . . . Deploy keys(Allow write access) . . . . . Settings &gt; Actions &gt; General . . . . Actions &gt; initial commit Setup #1 &gt; Re-run jobs . . . . . . Pull requests &gt; Initial Setup &gt; Merge pull request . . . . . Done . .",
             "url": "https://100developer.github.io/blog100d/github/blog/2022/05/15/github_blog_Generate.html",

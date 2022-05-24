@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SASS 문법 | 100DBlog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="SASS 문법" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="SASS 문법" />
+<meta property="og:description" content="SASS 문법" />
+<link rel="canonical" href="https://100developer.github.io/blog100d/sass/syntax/2022/05/24/SASS_syntax.html" />
+<meta property="og:url" content="https://100developer.github.io/blog100d/sass/syntax/2022/05/24/SASS_syntax.html" />
+<meta property="og:site_name" content="100DBlog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-05-24T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SASS 문법" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-05-24T00:00:00-05:00","datePublished":"2022-05-24T00:00:00-05:00","description":"SASS 문법","headline":"SASS 문법","mainEntityOfPage":{"@type":"WebPage","@id":"https://100developer.github.io/blog100d/sass/syntax/2022/05/24/SASS_syntax.html"},"url":"https://100developer.github.io/blog100d/sass/syntax/2022/05/24/SASS_syntax.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog100d/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://100developer.github.io/blog100d/feed.xml" title="100DBlog" /><link rel="shortcut icon" type="image/x-icon" href="/blog100d/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog100d/">100DBlog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog100d/about/">About Me</a><a class="page-link" href="/blog100d/search/">Search</a><a class="page-link" href="/blog100d/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">SASS 문법</h1><p class="page-description">SASS 문법</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-05-24T00:00:00-05:00" itemprop="datePublished">
+        May 24, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog100d/categories/#SASS">SASS</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog100d/categories/#syntax">syntax</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#주석">주석</a></li>
+<li class="toc-entry toc-h3"><a href="#중첩">중첩</a></li>
+<li class="toc-entry toc-h3"><a href="#중첩-벗어나기">중첩 벗어나기</a></li>
+<li class="toc-entry toc-h3"><a href="#중첩된-속성">중첩된 속성</a></li>
+</ul><h3 id="주석">
+<a class="anchor" href="#%EC%A3%BC%EC%84%9D" aria-hidden="true"><span class="octicon octicon-link"></span></a>주석</h3>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 컴파일되지 않는 주석
+/* 컴파일되는 주석 */
+
+</code></pre></div></div>
+<hr>
+
+<h3 id="중첩">
+<a class="anchor" href="#%EC%A4%91%EC%B2%A9" aria-hidden="true"><span class="octicon octicon-link"></span></a>중첩</h3>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.btn</span><span class="p">{</span>
+  <span class="nt">position</span><span class="nd">:absolute</span><span class="p">;</span>
+  <span class="k">&amp;</span><span class="nc">.action</span><span class="p">{</span>
+    <span class="nt">color</span><span class="nd">:red</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<hr>
+
+<h3 id="중첩-벗어나기">
+<a class="anchor" href="#%EC%A4%91%EC%B2%A9-%EB%B2%97%EC%96%B4%EB%82%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>중첩 벗어나기</h3>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.list</span><span class="p">{</span>
+  <span class="nv">$w</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+  <span class="nv">$h</span><span class="p">:</span><span class="m">50px</span><span class="p">;</span>
+  <span class="nt">li</span><span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span><span class="nv">$w</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span><span class="nv">$h</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">@at-root</span> <span class="nc">.box</span><span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span><span class="nv">$w</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span><span class="nv">$h</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<hr>
+
+<h3 id="중첩된-속성">
+<a class="anchor" href="#%EC%A4%91%EC%B2%A9%EB%90%9C-%EC%86%8D%EC%84%B1" aria-hidden="true"><span class="octicon octicon-link"></span></a>중첩된 속성</h3>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">.box</span><span class="p">{</span>
+    <span class="nl">font</span><span class="p">:{</span>
+      <span class="nt">weight</span><span class="nd">:bold</span><span class="p">;</span>
+      <span class="nl">size</span><span class="p">:</span><span class="m">10px</span><span class="p">;</span>
+      <span class="nt">family</span><span class="nd">:sans-serif</span><span class="p">;</span>
+    <span class="p">};</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nl">top</span><span class="p">:</span><span class="m">10px</span><span class="p">;</span>
+      <span class="nl">left</span><span class="p">:</span><span class="m">20px</span><span class="p">;</span>
+    <span class="p">};</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nl">bottom</span><span class="p">:</span><span class="m">40px</span><span class="p">;</span>
+      <span class="nl">right</span><span class="p">:</span><span class="m">30px</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+
+
+  </div><a class="u-url" href="/blog100d/sass/syntax/2022/05/24/SASS_syntax.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog100d/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog100d/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog100d/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>100Designer &amp; 100Developer information storage</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/blog100d/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/blog100d/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
