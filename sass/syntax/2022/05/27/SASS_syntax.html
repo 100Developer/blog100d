@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="SASS 문법" />
 <meta property="og:description" content="SASS 문법" />
-<link rel="canonical" href="https://100developer.github.io/blog100d/sass/syntax/2022/05/24/SASS_syntax.html" />
-<meta property="og:url" content="https://100developer.github.io/blog100d/sass/syntax/2022/05/24/SASS_syntax.html" />
+<link rel="canonical" href="https://100developer.github.io/blog100d/sass/syntax/2022/05/27/SASS_syntax.html" />
+<meta property="og:url" content="https://100developer.github.io/blog100d/sass/syntax/2022/05/27/SASS_syntax.html" />
 <meta property="og:site_name" content="100DBlog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-05-24T00:00:00-05:00" />
+<meta property="article:published_time" content="2022-05-27T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="SASS 문법" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-05-24T00:00:00-05:00","datePublished":"2022-05-24T00:00:00-05:00","description":"SASS 문법","headline":"SASS 문법","mainEntityOfPage":{"@type":"WebPage","@id":"https://100developer.github.io/blog100d/sass/syntax/2022/05/24/SASS_syntax.html"},"url":"https://100developer.github.io/blog100d/sass/syntax/2022/05/24/SASS_syntax.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-05-27T00:00:00-05:00","datePublished":"2022-05-27T00:00:00-05:00","description":"SASS 문법","headline":"SASS 문법","mainEntityOfPage":{"@type":"WebPage","@id":"https://100developer.github.io/blog100d/sass/syntax/2022/05/27/SASS_syntax.html"},"url":"https://100developer.github.io/blog100d/sass/syntax/2022/05/27/SASS_syntax.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog100d/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://100developer.github.io/blog100d/feed.xml" title="100DBlog" /><link rel="shortcut icon" type="image/x-icon" href="/blog100d/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,8 +73,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">SASS 문법</h1><p class="page-description">SASS 문법</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-05-24T00:00:00-05:00" itemprop="datePublished">
-        May 24, 2022
+    <h1 class="post-title p-name" itemprop="name headline">SASS 문법</h1><p class="page-description">SASS 문법</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-05-27T00:00:00-05:00" itemprop="datePublished">
+        May 27, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -103,6 +103,12 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#중첩">중첩</a></li>
 <li class="toc-entry toc-h3"><a href="#중첩-벗어나기">중첩 벗어나기</a></li>
 <li class="toc-entry toc-h3"><a href="#중첩된-속성">중첩된 속성</a></li>
+<li class="toc-entry toc-h3"><a href="#변수">변수</a></li>
+<li class="toc-entry toc-h3"><a href="#변수-유효범위">변수 유효범위</a></li>
+<li class="toc-entry toc-h3"><a href="#변수-재할당">변수 재할당</a></li>
+<li class="toc-entry toc-h3"><a href="#변수-전역-설정">변수 전역 설정</a></li>
+<li class="toc-entry toc-h3"><a href="#변수-초깃값-설정">변수 초깃값 설정</a></li>
+<li class="toc-entry toc-h3"><a href="#변수-문자보간">변수 문자보간</a></li>
 </ul><h3 id="주석">
 <a class="anchor" href="#%EC%A3%BC%EC%84%9D" aria-hidden="true"><span class="octicon octicon-link"></span></a>주석</h3>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 컴파일되지 않는 주석
@@ -119,6 +125,15 @@ window.onload = wrap_img;
     <span class="nt">color</span><span class="nd">:red</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.btn</span><span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span><span class="nb">absolute</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.btn.active</span><span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span><span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+
 </code></pre></div></div>
 <hr>
 
@@ -137,6 +152,17 @@ window.onload = wrap_img;
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.list</span> <span class="nt">li</span><span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span><span class="m">50px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.box</span><span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span><span class="m">50px</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
 <hr>
 
 <h3 id="중첩된-속성">
@@ -158,8 +184,102 @@ window.onload = wrap_img;
   <span class="p">}</span>
 </code></pre></div></div>
 
+<hr>
 
-  </div><a class="u-url" href="/blog100d/sass/syntax/2022/05/24/SASS_syntax.html" hidden></a>
+<h3 id="변수">
+<a class="anchor" href="#%EB%B3%80%EC%88%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>변수</h3>
+<blockquote>
+  <p>$변수이름 : 속성값;</p>
+</blockquote>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$color-primary</span><span class="p">:</span><span class="mh">#444444</span><span class="p">;</span>
+<span class="nv">$url-image</span><span class="p">:</span><span class="s2">"assets/images/"</span><span class="p">;</span>
+<span class="nv">$w</span><span class="p">:</span><span class="m">200px</span><span class="p">;</span>
+
+<span class="nc">.box</span><span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span><span class="nv">$w</span><span class="p">;</span>
+  <span class="nl">margin-left</span><span class="p">:</span><span class="nv">$w</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span><span class="nv">$color-primary</span> <span class="sx">url($url-image + "bg.jpg")</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="변수-유효범위">
+<a class="anchor" href="#%EB%B3%80%EC%88%98-%EC%9C%A0%ED%9A%A8%EB%B2%94%EC%9C%84" aria-hidden="true"><span class="octicon octicon-link"></span></a>변수 유효범위</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box1</span><span class="p">{</span>
+  <span class="nv">$color</span><span class="p">:</span><span class="mh">#111</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span><span class="nv">$color</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//Error</span>
+<span class="nc">.box2</span><span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span><span class="nv">$color</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="변수-재할당">
+<a class="anchor" href="#%EB%B3%80%EC%88%98-%EC%9E%AC%ED%95%A0%EB%8B%B9" aria-hidden="true"><span class="octicon octicon-link"></span></a>변수 재할당</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$red</span><span class="p">:</span><span class="mh">#ff0000</span><span class="p">;</span>
+<span class="nv">$blue</span><span class="p">:</span><span class="mh">#0000ff</span><span class="p">;</span>
+
+<span class="nv">$color-primary</span><span class="p">:</span><span class="nv">$blue</span><span class="p">;</span>
+<span class="nv">$color-danger</span><span class="p">:</span><span class="nv">$red</span><span class="p">;</span>
+
+<span class="nc">.box</span><span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span><span class="nv">$color-primary</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span><span class="nv">$color-danger</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="변수-전역-설정">
+<a class="anchor" href="#%EB%B3%80%EC%88%98-%EC%A0%84%EC%97%AD-%EC%84%A4%EC%A0%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>변수 전역 설정</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box1</span><span class="p">{</span>
+  <span class="nv">$color</span><span class="p">:</span><span class="mh">#111</span> <span class="o">!</span><span class="n">global</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span><span class="nv">$color</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.box2</span><span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span><span class="nv">$color</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="변수-초깃값-설정">
+<a class="anchor" href="#%EB%B3%80%EC%88%98-%EC%B4%88%EA%B9%83%EA%B0%92-%EC%84%A4%EC%A0%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>변수 초깃값 설정</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$color-primary</span><span class="p">:</span><span class="no">red</span><span class="p">;</span>
+<span class="nc">.box</span><span class="p">{</span>
+  <span class="nv">$color-primary</span><span class="p">:</span><span class="no">blue</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span><span class="nv">$color-primary</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="변수-문자보간">
+<a class="anchor" href="#%EB%B3%80%EC%88%98-%EB%AC%B8%EC%9E%90%EB%B3%B4%EA%B0%84" aria-hidden="true"><span class="octicon octicon-link"></span></a>변수 문자보간</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$family</span><span class="p">:</span> <span class="nf">unquote</span><span class="p">(</span><span class="s2">"Droid_Sans"</span><span class="p">);</span>
+<span class="k">@import</span> <span class="sx">url("http://fonts.googleapis.com/css?family=</span><span class="si">#{</span><span class="n">family</span><span class="si">}</span><span class="sx">")</span>
+</code></pre></div></div>
+<blockquote>
+  <p>내장함수 unquote()는 문자에서 따옴표를 제거합니다.</p>
+</blockquote>
+
+<hr>
+
+
+  </div><a class="u-url" href="/blog100d/sass/syntax/2022/05/27/SASS_syntax.html" hidden></a>
 </article>
 
       </div>
