@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://100developer.github.io/blog100d/ui/history/0022/05/25/UI_History.html</loc>
-<lastmod>0022-05-25T23:58:48-05:50</lastmod>
-</url>
-<url>
 <loc>https://100developer.github.io/blog100d/github/blog/2022/05/15/github_blog_Generate.html</loc>
 <lastmod>2022-05-15T00:00:00-05:00</lastmod>
 </url>
@@ -27,6 +23,10 @@
 <url>
 <loc>https://100developer.github.io/blog100d/sass/syntax/2022/05/24/SASS_syntax.html</loc>
 <lastmod>2022-05-24T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://100developer.github.io/blog100d/ui/history/2022/05/26/UI_History.html</loc>
+<lastmod>2022-05-26T00:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>https://100developer.github.io/blog100d/about/</loc>
