@@ -109,6 +109,11 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#변수-전역-설정">변수 전역 설정</a></li>
 <li class="toc-entry toc-h3"><a href="#변수-초깃값-설정">변수 초깃값 설정</a></li>
 <li class="toc-entry toc-h3"><a href="#변수-문자보간">변수 문자보간</a></li>
+<li class="toc-entry toc-h3"><a href="#가져오기">가져오기</a></li>
+<li class="toc-entry toc-h3"><a href="#여러파일-가져오기-파일-분할">여러파일 가져오기, 파일 분할</a></li>
+<li class="toc-entry toc-h3"><a href="#연산--숫자">연산 -숫자</a></li>
+<li class="toc-entry toc-h3"><a href="#연산--문자">연산 -문자</a></li>
+<li class="toc-entry toc-h3"><a href="#연산--논리">연산 -논리</a></li>
 </ul><h3 id="주석">
 <a class="anchor" href="#%EC%A3%BC%EC%84%9D" aria-hidden="true"><span class="octicon octicon-link"></span></a>주석</h3>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 컴파일되지 않는 주석
@@ -278,6 +283,91 @@ window.onload = wrap_img;
 
 <hr>
 
+<h3 id="가져오기">
+<a class="anchor" href="#%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>가져오기</h3>
+
+<blockquote>
+  <p>@import로 외부에서 가져온 Sass 파일은 모두 단일 CSS 출력 파일로 <strong>병합</strong>됩니다. 
+또한 가져온 파일에 정의된 모든 변수 또는 Mixins 등을 주 파일에서 사용할 수 있습니다.</p>
+</blockquote>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="s2">"hello.css"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"http://hello.com/hello"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="sx">url(hello)</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"hello"</span> <span class="n">screen</span><span class="p">;</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="여러파일-가져오기-파일-분할">
+<a class="anchor" href="#%EC%97%AC%EB%9F%AC%ED%8C%8C%EC%9D%BC-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0-%ED%8C%8C%EC%9D%BC-%EB%B6%84%ED%95%A0" aria-hidden="true"><span class="octicon octicon-link"></span></a>여러파일 가져오기, 파일 분할</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="s2">"header"</span><span class="o">,</span> <span class="s2">"footer"</span>
+</code></pre></div></div>
+<blockquote>
+  <p>컴파일시, 분리되어서 컴파일이 된다.</p>
+  <div class="language-scss highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="s2">"_header"</span><span class="o">,</span> <span class="s2">"_footer"</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<hr>
+
+<h3 id="연산--숫자">
+<a class="anchor" href="#%EC%97%B0%EC%82%B0--%EC%88%AB%EC%9E%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>연산 -숫자</h3>
+<blockquote>
+  <p>일반적으로 절대값을 나타내는 PX 단위로 연산을 합니다. 
+상대적 단위 (%, em, vw등)의 연산의 경우 CSS calc()로 연산해야 합니다.</p>
+  <div class="language-scss highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">width</span><span class="nd">:calc</span><span class="o">(</span><span class="nt">50</span><span class="nv">%-20px</span><span class="o">)</span>
+</code></pre></div>  </div>
+  <p>나누기 연산은 ()로 한다</p>
+  <div class="language-scss highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nl">height</span><span class="p">:(</span><span class="m">100px</span> <span class="o">/</span><span class="m">2</span><span class="p">)</span>
+<span class="o">/*</span> <span class="err">추가</span> <span class="err">가능</span> <span class="o">*/</span>
+<span class="nv">$x</span><span class="o">:</span><span class="m">100px</span><span class="p">;</span>
+<span class="c1">//변수시 가능</span>
+<span class="nl">width</span><span class="p">:</span><span class="nv">$w</span> <span class="o">/</span><span class="m">2</span><span class="p">;</span>
+<span class="c1">//2개 이상 연산시 가능</span>
+<span class="nl">font-size</span><span class="p">:</span><span class="m">10px</span> <span class="o">+</span><span class="m">12px</span> <span class="o">/</span><span class="m">3</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<hr>
+
+<h3 id="연산--문자">
+<a class="anchor" href="#%EC%97%B0%EC%82%B0--%EB%AC%B8%EC%9E%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>연산 -문자</h3>
+<blockquote>
+  <p>문자 연산에는 +가 사용됩니다.
+문자 연산의 결과는 첫번째 피연산자를 기준으로 합니다. 
+첫 번째 피연산자에 따옴표가 붙어있다면 연산 결과는 따옴표로 묶습니다.
+반대로 첫 번째 피연산자에 따옴표가 붙어있지 않다면 연산 결과도 따옴표를 처리하지 않습니다.</p>
+  <div class="language-scss highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="na">div</span><span class="p">:</span><span class="o">:</span><span class="n">after</span><span class="p">{</span>
+  <span class="nl">content</span><span class="p">:</span><span class="s2">"Hello"</span><span class="o">+</span><span class="n">World</span><span class="p">;</span>
+  <span class="nl">flex-flow</span><span class="p">:</span> <span class="n">row</span> <span class="o">+</span><span class="s2">"-reverse"</span><span class="o">+</span><span class="s2">""</span><span class="o">+</span><span class="n">wrap</span>
+<span class="p">}</span>
+</code></pre></div>  </div>
+  <div class="language-css highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">div</span><span class="nd">::after</span><span class="p">{</span>
+  <span class="nl">content</span><span class="p">:</span><span class="s1">"Hello World"</span>
+  <span class="n">flex-flow</span><span class="p">:</span><span class="n">row-reverse</span> <span class="n">wrap</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<hr>
+
+<h3 id="연산--논리">
+<a class="anchor" href="#%EC%97%B0%EC%82%B0--%EB%85%BC%EB%A6%AC" aria-hidden="true"><span class="octicon octicon-link"></span></a>연산 -논리</h3>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$w</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+<span class="nc">.item</span><span class="p">{</span>
+  <span class="nt">display</span><span class="nd">:block</span><span class="p">;</span>
+  <span class="k">@if</span><span class="p">(</span><span class="nv">$w</span> <span class="o">&gt;</span> <span class="m">50px</span> <span class="ow">or</span> <span class="nv">$w</span> <span class="o">&lt;</span><span class="m">90px</span><span class="p">){</span>
+    <span class="nl">width</span><span class="p">:</span><span class="m">400px</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
   </div><a class="u-url" href="/blog100d/sass/syntax/2022/05/27/SASS_syntax.html" hidden></a>
 </article>
