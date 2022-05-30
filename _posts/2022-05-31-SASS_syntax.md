@@ -249,3 +249,87 @@ $w:100px;
   }
 }
 ```
+
+
+---
+
+### 재활용 -Mixin, Include01
+```scss
+@mixin size ($w:100px, $h:100px){
+  width:$w;
+  height:$h;
+}
+
+.box1{
+  @include:size;
+}
+.box2{
+  @include:size($h:300px);
+}
+```
+
+```css
+.box1{
+  width:100px;
+  height:100px;
+}
+.box2{
+  width:100px;
+  height:100px;
+}
+```
+
+
+---
+
+### 재활용 -Mixin, Include02
+```scss
+@mixin 믹스인이름{
+  스타일;
+}
+
+@mixin large-text{
+  font-size:22px;
+  font-weight:bold;
+  font-family:sans-serif;
+  color:orange;
+}
+```
+
+```scss
+@mixin large-text{
+  font:{
+    size:22px;
+    weight:bold;
+    family:sans-serif;
+  }
+  color:orange;
+  &::after{
+    content:"!!";
+  }
+  span.icon{
+    background:url("/images/icon.png");
+  }
+}
+.box1{
+  @include large-text;
+}
+```
+
+```css
+.box1{
+  font-size:22px;
+  font-weight:bold;
+  font-family:sans-serif;
+  color:orange;
+}
+
+.box1::after{
+  content:"!!";
+}
+
+.box1 span.icon{
+  background:url("/images/icon.png");
+}
+```
+
