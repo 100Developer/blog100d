@@ -333,3 +333,25 @@ $w:100px;
 }
 ```
 
+---
+
+### 재활용 -인수
+>개념
+
+```scss
+@mixin 믹스인이름($매개변수:parameters){
+  스타일;
+}
+
+@include 믹스인이름(인수);
+```
+
+```scss
+@mixin dash-line($width, $color){
+  border:$width dashed $color;
+}
+
+.box1
+```
+
+
