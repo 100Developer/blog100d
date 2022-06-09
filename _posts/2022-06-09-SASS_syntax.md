@@ -351,7 +351,333 @@ $w:100px;
   border:$width dashed $color;
 }
 
-.box1
+.box1{ @include dash-line(1px, red);}
+.box2{ @include dash-line(4px, blue);}
 ```
 
+```css
+.box1{ 
+  border:1px dashed red;
+}
+.box2{ 
+  border:4px dashed blue;
+}
+```
+---
 
+### 재활용 -인수 -기본값 설정
+>개념
+
+```scss
+@mixin 믹스인이름($매개변수:기본값){
+  스타일;
+}
+
+@include 믹스인이름(인수);
+```
+
+```scss
+@mixin dash-line($width:1px, $color:black){
+  border:$width dashed $color;
+}
+
+.box1{ @include dash-line;}
+.box2{ @include dash-line(4px);}
+```
+
+```css
+.box1{ 
+  border:1px dashed black;
+}
+.box2{ 
+  border:4px dashed black;
+}
+```
+---
+
+### 재활용 -인수 -키워드 인수
+>개념
+
+```scss
+@mixin 믹스인이름($매개변수A:기본값, $매개변수B:기본값){
+  스타일;
+}
+
+@include 믹스인이름($매개변수B:인수);
+```
+---
+
+### 재활용 -인수 -가변인수
+>개념
+
+```scss
+@mixin 믹스인이름($매개변수...){
+  스타일;
+}
+
+@include 믹스인이름(인수A, 인수B, 인수C);
+```
+
+```scss
+@mixin var($w, $h, $bg...){
+  width:$w;
+  height:$h;
+  background:$bg;
+}
+
+.box{
+  @include var(
+    100px,
+    200px,
+    url("image/a.png") no-repeat 10px 20px,
+    url("image/b.png") no-repeat,
+  ); 
+}
+```
+
+```css
+.box{ 
+  width:100px;
+  height:200px;
+  background:url("image/a.png") no-repeat 10px 20px, url("image/b.png") no-repeat,
+}
+```
+
+```scss
+@mixin font(
+  $style:normal,
+  $weight:normal,
+  $size:16px,
+  $family:sans-serif
+){
+  font:{
+    style:$style;
+    weight:$weight;
+    size:$size;
+    family:$%family;
+  }
+}
+
+div{
+  //매개변수 순서와 개수에 맞게 전달
+  $font-value:italic, bold, 16px, sans-serif;
+  @include font($font-value...);
+}
+span{
+  //필요한 값만 키워드 인수로 변수에 담아 전달
+  $font-value:(style:italic, size:22px);
+  @include font($font-value...);
+}
+a{
+  //필요한 값만 키워드 인수로 전달
+  @include font((weight:900, family:monospace)...);
+}
+
+```
+
+```css
+div{
+	font-style:italic;
+	font-weight:bold;
+	font-size:16px;
+	font-family:sans-serif;
+}
+span{
+	font-style:italic;
+	font-weight:normal;
+	font-size:22px;
+	font-family:sans-serif;
+}
+a{
+	font-style:normal;
+	font-weight:900;
+	font-size:16px;
+	font-family:monospace;
+}
+
+```
+
+---
+
+### 재활용 -Content
+>개념
+
+```scss
+@mixin 믹스인이름(){
+  스타일;
+  @content;
+}
+
+@include 믹스인이름(인수){
+  //스타일 블록
+}
+```
+
+```scss
+@mixin icon($url){
+  &::after{
+    content:$url;
+    @content;
+  }
+}
+
+.box1{
+  @include icon("image/icon1.png");
+}
+.box2{
+  @inlcude icon("image/icon2.png"){
+    display:block;
+    position:absolute;
+    width:100px;
+    height:100px;
+  }
+}
+
+```
+
+```css
+.box1::afte{
+	content:"image/icon1.png";
+}
+.box2::after{
+	content:"image/icon2.png";
+	display:block;
+	position:absolute;
+	width:100px;
+	height:100px;
+}
+```
+---
+
+### 재활용 -Content
+>개념
+
+```scss
+@mixin 믹스인이름(){
+  스타일;
+  @content;
+}
+
+@include 믹스인이름(인수){
+  //스타일 블록
+}
+```
+
+```scss
+@mixin icon($url){
+  &::after{
+    content:$url;
+    @content;
+  }
+}
+
+.box1{
+  @include icon("image/icon1.png");
+}
+.box2{
+  @inlcude icon("image/icon2.png"){
+    display:block;
+    position:absolute;
+    width:100px;
+    height:100px;
+  }
+}
+
+```
+
+```css
+.box1::afte{
+	content:"image/icon1.png";
+}
+.box2::after{
+	content:"image/icon2.png";
+	display:block;
+	position:absolute;
+	width:100px;
+	height:100px;
+}
+```
+---
+
+### 확장 -Extend
+>개념
+
+```scss
+@extend 선택자;
+```
+
+```scss
+.btn{
+	padding:10px;
+	margin:10px;
+	background:blue;
+}
+
+.btn-danger{
+	@extend .btn;
+	background:red;
+}
+
+```
+
+```css
+.btn, .btn-danger{
+	padding:10px;
+	margin:10px;
+	background:blue;
+}
+
+.btn-danger{
+	background:red;
+}
+```
+---
+
+### 확장 -추천하지 않는 이유
+
+```scss
+.container{
+	width:300px;
+	height:300px;
+	background:red;
+	.item{
+		width:200px;
+		height:200px;
+		background:blue;
+		.icon{
+			width:100px;
+			height:100px;
+			background:green;
+		}
+	}
+}
+
+.wrapper{
+	.new-icon{
+		@extend .icon;
+	}
+}
+
+```
+
+```css
+.container{
+	width:300px;
+	height:300px;
+	background:red;
+}
+
+.container .item{
+	width:200px;
+		height:200px;
+		background:blue;
+}
+
+.container .item .icon, .container .item .wrapper .new-icon, .wrapper .container .item .new-icon{
+
+	width:100px;
+			height:100px;
+			background:green;
+}
+```
+---
