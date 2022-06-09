@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="SASS 문법" />
 <meta property="og:description" content="SASS 문법" />
-<link rel="canonical" href="https://100developer.github.io/blog100d/sass/syntax/2022/06/02/SASS_syntax.html" />
-<meta property="og:url" content="https://100developer.github.io/blog100d/sass/syntax/2022/06/02/SASS_syntax.html" />
+<link rel="canonical" href="https://100developer.github.io/blog100d/sass/syntax/2022/06/09/SASS_syntax.html" />
+<meta property="og:url" content="https://100developer.github.io/blog100d/sass/syntax/2022/06/09/SASS_syntax.html" />
 <meta property="og:site_name" content="100DBlog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-06-02T00:00:00-05:00" />
+<meta property="article:published_time" content="2022-06-09T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="SASS 문법" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-06-02T00:00:00-05:00","datePublished":"2022-06-02T00:00:00-05:00","description":"SASS 문법","headline":"SASS 문법","mainEntityOfPage":{"@type":"WebPage","@id":"https://100developer.github.io/blog100d/sass/syntax/2022/06/02/SASS_syntax.html"},"url":"https://100developer.github.io/blog100d/sass/syntax/2022/06/02/SASS_syntax.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-06-09T00:00:00-05:00","datePublished":"2022-06-09T00:00:00-05:00","description":"SASS 문법","headline":"SASS 문법","mainEntityOfPage":{"@type":"WebPage","@id":"https://100developer.github.io/blog100d/sass/syntax/2022/06/09/SASS_syntax.html"},"url":"https://100developer.github.io/blog100d/sass/syntax/2022/06/09/SASS_syntax.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog100d/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://100developer.github.io/blog100d/feed.xml" title="100DBlog" /><link rel="shortcut icon" type="image/x-icon" href="/blog100d/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,13 +73,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">SASS 문법</h1><p class="page-description">SASS 문법</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-06-02T00:00:00-05:00" itemprop="datePublished">
-        Jun 2, 2022
+    <h1 class="post-title p-name" itemprop="name headline">SASS 문법</h1><p class="page-description">SASS 문법</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-06-09T00:00:00-05:00" itemprop="datePublished">
+        Jun 9, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -117,6 +117,13 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#재활용--mixin-include01">재활용 -Mixin, Include01</a></li>
 <li class="toc-entry toc-h3"><a href="#재활용--mixin-include02">재활용 -Mixin, Include02</a></li>
 <li class="toc-entry toc-h3"><a href="#재활용--인수">재활용 -인수</a></li>
+<li class="toc-entry toc-h3"><a href="#재활용--인수--기본값-설정">재활용 -인수 -기본값 설정</a></li>
+<li class="toc-entry toc-h3"><a href="#재활용--인수--키워드-인수">재활용 -인수 -키워드 인수</a></li>
+<li class="toc-entry toc-h3"><a href="#재활용--인수--가변인수">재활용 -인수 -가변인수</a></li>
+<li class="toc-entry toc-h3"><a href="#재활용--content">재활용 -Content</a></li>
+<li class="toc-entry toc-h3"><a href="#재활용--content-1">재활용 -Content</a></li>
+<li class="toc-entry toc-h3"><a href="#확장--extend">확장 -Extend</a></li>
+<li class="toc-entry toc-h3"><a href="#확장--추천하지-않는-이유">확장 -추천하지 않는 이유</a></li>
 </ul><h3 id="주석">
 <a class="anchor" href="#%EC%A3%BC%EC%84%9D" aria-hidden="true"><span class="octicon octicon-link"></span></a>주석</h3>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 컴파일되지 않는 주석
@@ -469,11 +476,336 @@ window.onload = wrap_img;
   <span class="nl">border</span><span class="p">:</span><span class="nv">$width</span> <span class="nb">dashed</span> <span class="nv">$color</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nc">.box1</span>
+<span class="nc">.box1</span><span class="p">{</span> <span class="k">@include</span> <span class="nd">dash-line</span><span class="p">(</span><span class="m">1px</span><span class="o">,</span> <span class="no">red</span><span class="p">);}</span>
+<span class="nc">.box2</span><span class="p">{</span> <span class="k">@include</span> <span class="nd">dash-line</span><span class="p">(</span><span class="m">4px</span><span class="o">,</span> <span class="no">blue</span><span class="p">);}</span>
 </code></pre></div></div>
 
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box1</span><span class="p">{</span> 
+  <span class="nl">border</span><span class="p">:</span><span class="m">1px</span> <span class="nb">dashed</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.box2</span><span class="p">{</span> 
+  <span class="nl">border</span><span class="p">:</span><span class="m">4px</span> <span class="nb">dashed</span> <span class="no">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<hr>
 
-  </div><a class="u-url" href="/blog100d/sass/syntax/2022/06/02/SASS_syntax.html" hidden></a>
+<h3 id="재활용--인수--기본값-설정">
+<a class="anchor" href="#%EC%9E%AC%ED%99%9C%EC%9A%A9--%EC%9D%B8%EC%88%98--%EA%B8%B0%EB%B3%B8%EA%B0%92-%EC%84%A4%EC%A0%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>재활용 -인수 -기본값 설정</h3>
+<blockquote>
+  <p>개념</p>
+</blockquote>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="err">믹스인이름</span><span class="o">(</span><span class="err">$매개변수</span><span class="nd">:</span><span class="err">기본값</span><span class="o">)</span><span class="p">{</span>
+  <span class="err">스타일</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@include</span> <span class="err">믹스인이름</span><span class="o">(</span><span class="err">인수</span><span class="o">)</span><span class="p">;</span>
+</code></pre></div></div>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">dash-line</span><span class="p">(</span><span class="nv">$width</span><span class="o">:</span><span class="m">1px</span><span class="o">,</span> <span class="nv">$color</span><span class="o">:</span><span class="no">black</span><span class="p">){</span>
+  <span class="nl">border</span><span class="p">:</span><span class="nv">$width</span> <span class="nb">dashed</span> <span class="nv">$color</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.box1</span><span class="p">{</span> <span class="k">@include</span> <span class="nd">dash-line</span><span class="p">;}</span>
+<span class="nc">.box2</span><span class="p">{</span> <span class="k">@include</span> <span class="nd">dash-line</span><span class="p">(</span><span class="m">4px</span><span class="p">);}</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box1</span><span class="p">{</span> 
+  <span class="nl">border</span><span class="p">:</span><span class="m">1px</span> <span class="nb">dashed</span> <span class="no">black</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.box2</span><span class="p">{</span> 
+  <span class="nl">border</span><span class="p">:</span><span class="m">4px</span> <span class="nb">dashed</span> <span class="no">black</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<hr>
+
+<h3 id="재활용--인수--키워드-인수">
+<a class="anchor" href="#%EC%9E%AC%ED%99%9C%EC%9A%A9--%EC%9D%B8%EC%88%98--%ED%82%A4%EC%9B%8C%EB%93%9C-%EC%9D%B8%EC%88%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>재활용 -인수 -키워드 인수</h3>
+<blockquote>
+  <p>개념</p>
+</blockquote>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="err">믹스인이름</span><span class="o">(</span><span class="err">$매개변수</span><span class="nt">A</span><span class="nd">:</span><span class="err">기본값</span><span class="o">,</span> <span class="err">$매개변수</span><span class="nt">B</span><span class="nd">:</span><span class="err">기본값</span><span class="o">)</span><span class="p">{</span>
+  <span class="err">스타일</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@include</span> <span class="err">믹스인이름</span><span class="o">(</span><span class="err">$매개변수</span><span class="nt">B</span><span class="nd">:</span><span class="err">인수</span><span class="o">)</span><span class="p">;</span>
+</code></pre></div></div>
+<hr>
+
+<h3 id="재활용--인수--가변인수">
+<a class="anchor" href="#%EC%9E%AC%ED%99%9C%EC%9A%A9--%EC%9D%B8%EC%88%98--%EA%B0%80%EB%B3%80%EC%9D%B8%EC%88%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>재활용 -인수 -가변인수</h3>
+<blockquote>
+  <p>개념</p>
+</blockquote>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="err">믹스인이름</span><span class="o">(</span><span class="err">$매개변수</span><span class="nc">...</span><span class="o">)</span><span class="p">{</span>
+  <span class="err">스타일</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@include</span> <span class="err">믹스인이름</span><span class="o">(</span><span class="err">인수</span><span class="nt">A</span><span class="o">,</span> <span class="err">인수</span><span class="nt">B</span><span class="o">,</span> <span class="err">인수</span><span class="nt">C</span><span class="o">)</span><span class="p">;</span>
+</code></pre></div></div>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">var</span><span class="p">(</span><span class="nv">$w</span><span class="o">,</span> <span class="nv">$h</span><span class="o">,</span> <span class="nv">$bg</span><span class="o">...</span><span class="p">){</span>
+  <span class="nl">width</span><span class="p">:</span><span class="nv">$w</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span><span class="nv">$h</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span><span class="nv">$bg</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.box</span><span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">var</span><span class="p">(</span>
+    <span class="m">100px</span><span class="o">,</span>
+    <span class="m">200px</span><span class="o">,</span>
+    <span class="sx">url("image/a.png")</span> <span class="nb">no-repeat</span> <span class="m">10px</span> <span class="m">20px</span><span class="o">,</span>
+    <span class="sx">url("image/b.png")</span> <span class="nb">no-repeat</span><span class="o">,</span>
+  <span class="p">);</span> 
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span><span class="p">{</span> 
+  <span class="nl">width</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span><span class="m">200px</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span><span class="sx">url("image/a.png")</span> <span class="nb">no-repeat</span> <span class="m">10px</span> <span class="m">20px</span><span class="p">,</span> <span class="sx">url("image/b.png")</span> <span class="nb">no-repeat</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">font</span><span class="p">(</span>
+  <span class="nv">$style</span><span class="o">:</span><span class="nb">normal</span><span class="o">,</span>
+  <span class="nv">$weight</span><span class="o">:</span><span class="nb">normal</span><span class="o">,</span>
+  <span class="nv">$size</span><span class="o">:</span><span class="m">16px</span><span class="o">,</span>
+  <span class="nv">$family</span><span class="o">:</span><span class="nb">sans-serif</span>
+<span class="p">){</span>
+  <span class="nl">font</span><span class="p">:{</span>
+    <span class="na">style</span><span class="p">:</span><span class="nv">$style</span><span class="p">;</span>
+    <span class="na">weight</span><span class="p">:</span><span class="nv">$weight</span><span class="p">;</span>
+    <span class="nl">size</span><span class="p">:</span><span class="nv">$size</span><span class="p">;</span>
+    <span class="na">family</span><span class="p">:</span><span class="err">$</span><span class="nd">%family</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">{</span>
+  <span class="c1">//매개변수 순서와 개수에 맞게 전달</span>
+  <span class="nv">$font-value</span><span class="p">:</span><span class="nb">italic</span><span class="o">,</span> <span class="nb">bold</span><span class="o">,</span> <span class="m">16px</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="k">@include</span> <span class="nd">font</span><span class="p">(</span><span class="nv">$font-value</span><span class="o">...</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nt">span</span><span class="p">{</span>
+  <span class="c1">//필요한 값만 키워드 인수로 변수에 담아 전달</span>
+  <span class="nv">$font-value</span><span class="p">:(</span><span class="n">style</span><span class="o">:</span><span class="nb">italic</span><span class="o">,</span> <span class="n">size</span><span class="o">:</span><span class="m">22px</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">font</span><span class="p">(</span><span class="nv">$font-value</span><span class="o">...</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nt">a</span><span class="p">{</span>
+  <span class="c1">//필요한 값만 키워드 인수로 전달</span>
+  <span class="k">@include</span> <span class="nd">font</span><span class="p">((</span><span class="n">weight</span><span class="o">:</span><span class="m">900</span><span class="o">,</span> <span class="n">family</span><span class="o">:</span><span class="nb">monospace</span><span class="p">)</span><span class="o">...</span><span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">div</span><span class="p">{</span>
+	<span class="nl">font-style</span><span class="p">:</span><span class="nb">italic</span><span class="p">;</span>
+	<span class="nl">font-weight</span><span class="p">:</span><span class="nb">bold</span><span class="p">;</span>
+	<span class="nl">font-size</span><span class="p">:</span><span class="m">16px</span><span class="p">;</span>
+	<span class="nl">font-family</span><span class="p">:</span><span class="nb">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">span</span><span class="p">{</span>
+	<span class="nl">font-style</span><span class="p">:</span><span class="nb">italic</span><span class="p">;</span>
+	<span class="nl">font-weight</span><span class="p">:</span><span class="nb">normal</span><span class="p">;</span>
+	<span class="nl">font-size</span><span class="p">:</span><span class="m">22px</span><span class="p">;</span>
+	<span class="nl">font-family</span><span class="p">:</span><span class="nb">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">a</span><span class="p">{</span>
+	<span class="nl">font-style</span><span class="p">:</span><span class="nb">normal</span><span class="p">;</span>
+	<span class="nl">font-weight</span><span class="p">:</span><span class="m">900</span><span class="p">;</span>
+	<span class="nl">font-size</span><span class="p">:</span><span class="m">16px</span><span class="p">;</span>
+	<span class="nl">font-family</span><span class="p">:</span><span class="nb">monospace</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="재활용--content">
+<a class="anchor" href="#%EC%9E%AC%ED%99%9C%EC%9A%A9--content" aria-hidden="true"><span class="octicon octicon-link"></span></a>재활용 -Content</h3>
+<blockquote>
+  <p>개념</p>
+</blockquote>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="err">믹스인이름</span><span class="o">()</span><span class="p">{</span>
+  <span class="err">스타일</span><span class="p">;</span>
+  <span class="k">@content</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@include</span> <span class="err">믹스인이름</span><span class="o">(</span><span class="err">인수</span><span class="o">)</span><span class="p">{</span>
+  <span class="c1">//스타일 블록</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">icon</span><span class="p">(</span><span class="nv">$url</span><span class="p">){</span>
+  <span class="k">&amp;</span><span class="nd">::after</span><span class="p">{</span>
+    <span class="nl">content</span><span class="p">:</span><span class="nv">$url</span><span class="p">;</span>
+    <span class="k">@content</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.box1</span><span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">icon</span><span class="p">(</span><span class="s2">"image/icon1.png"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nc">.box2</span><span class="p">{</span>
+  <span class="k">@inlcude</span> <span class="nt">icon</span><span class="o">(</span><span class="s2">"image/icon2.png"</span><span class="o">)</span><span class="p">{</span>
+    <span class="nt">display</span><span class="nd">:block</span><span class="p">;</span>
+    <span class="nt">position</span><span class="nd">:absolute</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box1</span><span class="nd">::afte</span><span class="p">{</span>
+	<span class="nl">content</span><span class="p">:</span><span class="s1">"image/icon1.png"</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.box2</span><span class="nd">::after</span><span class="p">{</span>
+	<span class="nl">content</span><span class="p">:</span><span class="s1">"image/icon2.png"</span><span class="p">;</span>
+	<span class="nl">display</span><span class="p">:</span><span class="nb">block</span><span class="p">;</span>
+	<span class="nl">position</span><span class="p">:</span><span class="nb">absolute</span><span class="p">;</span>
+	<span class="nl">width</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+	<span class="nl">height</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<hr>
+
+<h3 id="재활용--content-1">
+<a class="anchor" href="#%EC%9E%AC%ED%99%9C%EC%9A%A9--content-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>재활용 -Content</h3>
+<blockquote>
+  <p>개념</p>
+</blockquote>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="err">믹스인이름</span><span class="o">()</span><span class="p">{</span>
+  <span class="err">스타일</span><span class="p">;</span>
+  <span class="k">@content</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@include</span> <span class="err">믹스인이름</span><span class="o">(</span><span class="err">인수</span><span class="o">)</span><span class="p">{</span>
+  <span class="c1">//스타일 블록</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">icon</span><span class="p">(</span><span class="nv">$url</span><span class="p">){</span>
+  <span class="k">&amp;</span><span class="nd">::after</span><span class="p">{</span>
+    <span class="nl">content</span><span class="p">:</span><span class="nv">$url</span><span class="p">;</span>
+    <span class="k">@content</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.box1</span><span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">icon</span><span class="p">(</span><span class="s2">"image/icon1.png"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nc">.box2</span><span class="p">{</span>
+  <span class="k">@inlcude</span> <span class="nt">icon</span><span class="o">(</span><span class="s2">"image/icon2.png"</span><span class="o">)</span><span class="p">{</span>
+    <span class="nt">display</span><span class="nd">:block</span><span class="p">;</span>
+    <span class="nt">position</span><span class="nd">:absolute</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box1</span><span class="nd">::afte</span><span class="p">{</span>
+	<span class="nl">content</span><span class="p">:</span><span class="s1">"image/icon1.png"</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.box2</span><span class="nd">::after</span><span class="p">{</span>
+	<span class="nl">content</span><span class="p">:</span><span class="s1">"image/icon2.png"</span><span class="p">;</span>
+	<span class="nl">display</span><span class="p">:</span><span class="nb">block</span><span class="p">;</span>
+	<span class="nl">position</span><span class="p">:</span><span class="nb">absolute</span><span class="p">;</span>
+	<span class="nl">width</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+	<span class="nl">height</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<hr>
+
+<h3 id="확장--extend">
+<a class="anchor" href="#%ED%99%95%EC%9E%A5--extend" aria-hidden="true"><span class="octicon octicon-link"></span></a>확장 -Extend</h3>
+<blockquote>
+  <p>개념</p>
+</blockquote>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@extend</span> <span class="err">선택자</span><span class="p">;</span>
+</code></pre></div></div>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.btn</span><span class="p">{</span>
+	<span class="nl">padding</span><span class="p">:</span><span class="m">10px</span><span class="p">;</span>
+	<span class="nl">margin</span><span class="p">:</span><span class="m">10px</span><span class="p">;</span>
+	<span class="nt">background</span><span class="nd">:blue</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.btn-danger</span><span class="p">{</span>
+	<span class="k">@extend</span> <span class="nc">.btn</span><span class="p">;</span>
+	<span class="nt">background</span><span class="nd">:red</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.btn</span><span class="o">,</span> <span class="nc">.btn-danger</span><span class="p">{</span>
+	<span class="nl">padding</span><span class="p">:</span><span class="m">10px</span><span class="p">;</span>
+	<span class="nl">margin</span><span class="p">:</span><span class="m">10px</span><span class="p">;</span>
+	<span class="nl">background</span><span class="p">:</span><span class="no">blue</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.btn-danger</span><span class="p">{</span>
+	<span class="nl">background</span><span class="p">:</span><span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<hr>
+
+<h3 id="확장--추천하지-않는-이유">
+<a class="anchor" href="#%ED%99%95%EC%9E%A5--%EC%B6%94%EC%B2%9C%ED%95%98%EC%A7%80-%EC%95%8A%EB%8A%94-%EC%9D%B4%EC%9C%A0" aria-hidden="true"><span class="octicon octicon-link"></span></a>확장 -추천하지 않는 이유</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.container</span><span class="p">{</span>
+	<span class="nl">width</span><span class="p">:</span><span class="m">300px</span><span class="p">;</span>
+	<span class="nl">height</span><span class="p">:</span><span class="m">300px</span><span class="p">;</span>
+	<span class="nt">background</span><span class="nd">:red</span><span class="p">;</span>
+	<span class="nc">.item</span><span class="p">{</span>
+		<span class="nl">width</span><span class="p">:</span><span class="m">200px</span><span class="p">;</span>
+		<span class="nl">height</span><span class="p">:</span><span class="m">200px</span><span class="p">;</span>
+		<span class="nt">background</span><span class="nd">:blue</span><span class="p">;</span>
+		<span class="nc">.icon</span><span class="p">{</span>
+			<span class="nl">width</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+			<span class="nl">height</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+			<span class="nt">background</span><span class="nd">:green</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.wrapper</span><span class="p">{</span>
+	<span class="nc">.new-icon</span><span class="p">{</span>
+		<span class="k">@extend</span> <span class="nc">.icon</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.container</span><span class="p">{</span>
+	<span class="nl">width</span><span class="p">:</span><span class="m">300px</span><span class="p">;</span>
+	<span class="nl">height</span><span class="p">:</span><span class="m">300px</span><span class="p">;</span>
+	<span class="nl">background</span><span class="p">:</span><span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.container</span> <span class="nc">.item</span><span class="p">{</span>
+	<span class="nl">width</span><span class="p">:</span><span class="m">200px</span><span class="p">;</span>
+		<span class="nl">height</span><span class="p">:</span><span class="m">200px</span><span class="p">;</span>
+		<span class="nl">background</span><span class="p">:</span><span class="no">blue</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.container</span> <span class="nc">.item</span> <span class="nc">.icon</span><span class="o">,</span> <span class="nc">.container</span> <span class="nc">.item</span> <span class="nc">.wrapper</span> <span class="nc">.new-icon</span><span class="o">,</span> <span class="nc">.wrapper</span> <span class="nc">.container</span> <span class="nc">.item</span> <span class="nc">.new-icon</span><span class="p">{</span>
+
+	<span class="nl">width</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+			<span class="nl">height</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+			<span class="nl">background</span><span class="p">:</span><span class="no">green</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<hr>
+
+  </div><a class="u-url" href="/blog100d/sass/syntax/2022/06/09/SASS_syntax.html" hidden></a>
 </article>
 
       </div>
