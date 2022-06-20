@@ -681,3 +681,118 @@ a{
 }
 ```
 ---
+
+### 함수 - IF 
+
+> if(조건, 표현식1, 표현식2)
+> 삼항 함수와 비슷
+
+
+```scss
+$width:550px;
+div{
+	width:if($width > 300px, $width, null)
+}
+```
+
+```css
+div{
+	width:550px;
+}
+```
+
+---
+
+### 조건문 - IF(지시어) 
+
+> @if 지시어는 조건에 따른 분기 처리가 가능하며, if문(if statements)과 유사합니다.
+> 같이 사용할 수 있는 지시어는 @else if 가 있습니다.
+> 추가 지시어를 사용하면 좀 더 복잡한 조건문을 작성할 수 있습니다.
+
+
+```scss
+$bg:true;
+div{
+	@if $bg{
+		background:url("/images/a.jpg");
+	}
+}
+```
+```scss
+$color:orange;
+div{
+	@if $color == strawberry{
+		color:#fe2e2e
+	} @else if $color == orange{
+		color:#fe9a2e;
+	} @else if $color == banana{
+		color:#ffff00;
+	} @else {
+		color:#2a1b0a;
+	}
+}
+```
+
+
+```css
+div{
+	color:#fe9a2e;
+}
+```
+---
+
+### 조건문 - IF - 예제
+
+```scss
+	@function limitSize($size){
+		@if ($size >= 0 and $size <= 200px){
+			@return 200px;
+		} @else {
+			@return 800px;
+		}
+	}
+	
+	div{
+		width:limitSize(180px);
+		height:limitSize(340px);
+	}
+```
+
+```css
+div{
+	width:200px;
+	height:800px;
+}
+```
+
+```scss
+	@mixin positionCenter($w, $h, $p:absolute){
+		@if(
+			$p == absolute
+			or $p == fixed
+			or not $p == relative
+			or not $p == static
+		){
+			width:if(unitless($w), #{$w}px, $w);
+			height:if(unitless($h), #{$h}px, $h);
+			position:$p;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			margin:auto;
+		}
+	}
+	
+	.box1{
+		@include positionCenter(10px, 20px);
+	}
+	.box2{
+		@include positionCenter(50, 50, fixed);
+	}
+	.box3{
+		@include positionCenter(100, 200, relative);
+	}
+	
+```
+---
