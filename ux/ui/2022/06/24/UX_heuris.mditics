@@ -4,22 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>100DBlog | 100Designer &amp; 100Developer information storage</title>
+<title>제이콥 닐슨의 10가지 휴리스틱 평가 | 100DBlog</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="100DBlog" />
+<meta property="og:title" content="제이콥 닐슨의 10가지 휴리스틱 평가" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="100Designer &amp; 100Developer information storage" />
-<meta property="og:description" content="100Designer &amp; 100Developer information storage" />
-<link rel="canonical" href="https://100developer.github.io/blog100d/" />
-<meta property="og:url" content="https://100developer.github.io/blog100d/" />
+<meta name="description" content="제이콥 닐슨의 휴리스틱 평가" />
+<meta property="og:description" content="제이콥 닐슨의 휴리스틱 평가" />
+<link rel="canonical" href="https://100developer.github.io/blog100d/ux/ui/2022/06/24/UX_heuris.mditics" />
+<meta property="og:url" content="https://100developer.github.io/blog100d/ux/ui/2022/06/24/UX_heuris.mditics" />
 <meta property="og:site_name" content="100DBlog" />
-<meta property="og:image" content="https://100developer.github.io/blog100d/images/logo.png" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://100developer.github.io/blog100d/images/logo.png" />
-<meta property="twitter:title" content="100DBlog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-06-24T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="제이콥 닐슨의 10가지 휴리스틱 평가" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"100Designer &amp; 100Developer information storage","headline":"100DBlog","image":"https://100developer.github.io/blog100d/images/logo.png","name":"100DBlog","url":"https://100developer.github.io/blog100d/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-06-24T00:00:00-05:00","datePublished":"2022-06-24T00:00:00-05:00","description":"제이콥 닐슨의 휴리스틱 평가","headline":"제이콥 닐슨의 10가지 휴리스틱 평가","mainEntityOfPage":{"@type":"WebPage","@id":"https://100developer.github.io/blog100d/ux/ui/2022/06/24/UX_heuris.mditics"},"url":"https://100developer.github.io/blog100d/ux/ui/2022/06/24/UX_heuris.mditics"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog100d/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://100developer.github.io/blog100d/feed.xml" title="100DBlog" /><link rel="shortcut icon" type="image/x-icon" href="/blog100d/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,77 +70,96 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p><a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fgjbae1212%2Fhit-counter&amp;count_bg=%23FADF5C&amp;title_bg=%230A138B&amp;icon=&amp;icon_color=%23E7E7E7&amp;title=count&amp;edge_flat=false" alt="Hits" /></a></p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<p><img src="/blog100d/images/img_head.png" alt="" /></p>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">제이콥 닐슨의 10가지 휴리스틱 평가</h1><p class="page-description">제이콥 닐슨의 휴리스틱 평가</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-06-24T00:00:00-05:00" itemprop="datePublished">
+        Jun 24, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
 
-<p><img src="https://ghchart.rshah.org/KoolB-100D" alt="잔디" title="https://github.com/KoolB-100D" /></p>
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog100d/categories/#UX">UX</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog100d/categories/#UI">UI</a>
+        
+      
+      </p>
+    
 
-<blockquote>
-  <p>Posts</p>
-</blockquote>
+    </header>
 
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+</ul>## Visibility of system status
+### 시스템의 현재 상태를 시각화하여 보여주기
 
+---
 
-  
+## Match between system and the real world
+### 현실 세계와 부합되는 시스템
 
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
+---
 
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
+## User control and freedom 
+### 사용자에게 적절한 통제권을 부여
 
- 
-  
+---
 
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/blog100d/ux/ui/2022/06/24/UX_heuris.mditics">
-    제이콥 닐슨의 10가지 휴리스틱 평가
-    </a>
-</h3><p class="post-meta-description">제이콥 닐슨의 휴리스틱 평가</p><p class="post-meta">Jun 24, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/blog100d/sass/syntax/2022/06/21/SASS_syntax.html">
-    SASS 문법
-    </a>
-</h3><p class="post-meta-description">SASS 문법</p><p class="post-meta">Jun 21, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/blog100d/ui/history/2022/05/26/UI_History.html">
-    UI History
-    </a>
-</h3><p class="post-meta-description">UI History</p><p class="post-meta">May 26, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/blog100d/ux/ui/%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C/2022/05/23/UX_resource.html">
-    UX,UI 참고자료
-    </a>
-</h3><p class="post-meta-description">UX,UI 참고자료</p><p class="post-meta">May 23, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/blog100d/ux/ui/2022/05/23/UX_term.html">
-    실무에 필요한 UX,UI 용어
-    </a>
-</h3><p class="post-meta-description">실무에 필요한 UX,UI 용어</p><p class="post-meta">May 23, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/blog100d/github/blog/2022/05/15/github_blog_Post.html">
-    github blog 포스트 쓰기
-    </a>
-</h3><p class="post-meta-description">github blog post 쓰기</p><p class="post-meta">May 15, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/blog100d/github/blog/2022/05/15/github_blog_Menu.html">
-    github blog 메뉴 만들기
-    </a>
-</h3><p class="post-meta-description">github blog Menu 만들기</p><p class="post-meta">May 15, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/blog100d/github/blog/2022/05/15/github_blog_Generate.html">
-    github blog 생성하기
-    </a>
-</h3><p class="post-meta-description">github blog fastpages로 쉽게 생성하기</p><p class="post-meta">May 15, 2022</p>
-</li></ul>
+## Consistency and standards
+### 일관성과 표준성 유지
 
-    </div>
+---
+
+## Error prevention 
+### 에러를 사전에 방지하는 디자인
+
+---
+
+## Recognition rather than recall
+### 기억해내기보다 인지할 수 있도록
+
+---
+
+---
+
+## Flexibility and efficiency of use
+### 유연하고 효율적인 사용
+
+---
+
+---
+
+## Aesthetic and minimalist design
+### 심미적인고 미니멀한 디자인
+
+---
+
+---
+
+## Help users recognize, Diagnose, and recover from errors
+### 에러 발생시 사용자 스스로 문제를 파악하고 수정할 수 있도록 설계
+
+---
+
+---
+
+## Help anf documentation
+### 사용자에게 충분한 도움말을 제공
+
+---
+
+  </div><a class="u-url" href="/blog100d/ux/ui/2022/06/24/UX_heuris.mditics" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/blog100d/"></data>
