@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -127,6 +127,9 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#함수---if">함수 - IF</a></li>
 <li class="toc-entry toc-h3"><a href="#조건문---if지시어">조건문 - IF(지시어)</a></li>
 <li class="toc-entry toc-h3"><a href="#조건문---if---예제">조건문 - IF - 예제</a></li>
+<li class="toc-entry toc-h3"><a href="#반복문---for">반복문 - For</a></li>
+<li class="toc-entry toc-h3"><a href="#반복문---each">반복문 - Each</a></li>
+<li class="toc-entry toc-h3"><a href="#반복문---each---list-반복">반복문 - Each - List 반복</a></li>
 </ul><h3 id="주석">
 <a class="anchor" href="#%EC%A3%BC%EC%84%9D" aria-hidden="true"><span class="octicon octicon-link"></span></a>주석</h3>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 컴파일되지 않는 주석
@@ -916,6 +919,126 @@ window.onload = wrap_img;
 		<span class="k">@include</span> <span class="nd">positionCenter</span><span class="p">(</span><span class="m">100</span><span class="o">,</span> <span class="m">200</span><span class="o">,</span> <span class="nb">relative</span><span class="p">);</span>
 	<span class="p">}</span>
 	
+</code></pre></div></div>
+<hr>
+
+<h3 id="반복문---for">
+<a class="anchor" href="#%EB%B0%98%EB%B3%B5%EB%AC%B8---for" aria-hidden="true"><span class="octicon octicon-link"></span></a>반복문 - For</h3>
+
+<blockquote>
+  <p>for문과 유사합니다.
+@for는 through를 사용하는 형식과 to를 사용하는 형식으로 나뉩니다.
+두 형식은 종료 조건이 해석되는 방식이 다릅니다.</p>
+</blockquote>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// through</span>
+<span class="c1">// 종료 만큼 반복</span>
+<span class="k">@for</span> <span class="err">$변수</span> <span class="ow">from</span> <span class="err">시작</span> <span class="ow">through</span> <span class="err">종료</span><span class="p">{</span>
+	<span class="c1">//반복 내용</span>
+<span class="p">}</span>
+
+<span class="c1">// to</span>
+<span class="c1">// 종료 직전까지 반복</span>
+<span class="k">@for</span> <span class="err">$변수</span> <span class="ow">from</span> <span class="err">시작</span> <span class="ow">to</span> <span class="err">종료</span><span class="p">{</span>
+	<span class="c1">//반복 내용</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 1부터 3번 반복</span>
+<span class="k">@for</span> <span class="nv">$I</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">3</span><span class="p">{</span>
+	<span class="nc">.through</span><span class="nd">:nth-child</span><span class="o">(</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span><span class="o">)</span><span class="p">{</span>
+		<span class="nl">width</span><span class="p">:</span><span class="m">20px</span> <span class="o">*</span> <span class="nv">$i</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 1부터 3 직전까지만 반복(2번 반복)</span>
+<span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">to</span> <span class="m">3</span><span class="p">{</span>
+	<span class="nc">.to</span><span class="nd">:nth-child</span><span class="o">(</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span><span class="o">)</span><span class="p">{</span>
+		<span class="nl">width</span><span class="p">:</span><span class="m">20px</span> <span class="o">*</span> <span class="nv">$i</span>	
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.through</span><span class="nd">:nth-child</span><span class="o">(</span><span class="err">1</span><span class="o">)</span><span class="p">{</span>
+	<span class="nl">width</span><span class="p">:</span><span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.through</span><span class="nd">:nth-child</span><span class="o">(</span><span class="err">2</span><span class="o">)</span><span class="p">{</span>
+	<span class="nl">width</span><span class="p">:</span><span class="m">40px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.through</span><span class="nd">:nth-child</span><span class="o">(</span><span class="err">3</span><span class="o">)</span><span class="p">{</span>
+	<span class="nl">width</span><span class="p">:</span><span class="m">60px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.to</span><span class="nd">:nth-child</span><span class="o">(</span><span class="err">1</span><span class="o">)</span><span class="p">{</span>
+	<span class="nl">width</span><span class="p">:</span><span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.to</span><span class="nd">:nth-child</span><span class="o">(</span><span class="err">2</span><span class="o">)</span><span class="p">{</span>
+	<span class="nl">width</span><span class="p">:</span><span class="m">40px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+<h3 id="반복문---each">
+<a class="anchor" href="#%EB%B0%98%EB%B3%B5%EB%AC%B8---each" aria-hidden="true"><span class="octicon octicon-link"></span></a>반복문 - Each</h3>
+
+<blockquote>
+  <p>@each는 list와 map 데이터를 반복할 때 사용합니다.
+for in 문과 유사합니다.</p>
+</blockquote>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@each</span> <span class="err">$변수</span> <span class="n">in</span> <span class="err">데이터</span> <span class="p">{</span>
+	<span class="c1">//반복 내용</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//List Data</span>
+<span class="nv">$fruits</span><span class="p">:</span> <span class="p">(</span><span class="n">apple</span><span class="o">,</span> <span class="no">orange</span><span class="o">,</span> <span class="n">banana</span><span class="o">,</span> <span class="n">mango</span><span class="p">);</span>
+
+<span class="nc">.fruits</span><span class="p">{</span>
+	<span class="k">@each</span> <span class="nv">$fruit</span> <span class="n">in</span> <span class="nv">$fruits</span><span class="p">{</span>
+		<span class="nt">li</span><span class="nc">.</span><span class="si">#{</span><span class="nv">$fruit</span><span class="si">}</span><span class="p">{</span>
+			<span class="nt">background</span><span class="nd">:url</span><span class="o">(</span><span class="s2">"/images/</span><span class="si">#{</span><span class="n">fruit</span><span class="si">}</span><span class="s2">.png"</span><span class="o">)</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.fruits</span> <span class="nt">li</span> <span class="nc">.apple</span><span class="p">{</span>
+	<span class="nl">background</span><span class="p">:</span> <span class="sx">url("/images/apple.png")</span>
+<span class="p">}</span>
+
+<span class="nc">.fruits</span> <span class="nt">li</span> <span class="nc">.orange</span><span class="p">{</span>
+	<span class="nl">background</span><span class="p">:</span> <span class="sx">url("/images/orange.png")</span>
+<span class="p">}</span>
+
+<span class="nc">.fruits</span> <span class="nt">li</span> <span class="nc">.banana</span><span class="p">{</span>
+	<span class="nl">background</span><span class="p">:</span> <span class="sx">url("/images/banana.png")</span>
+<span class="p">}</span>
+
+<span class="nc">.fruits</span> <span class="nt">li</span> <span class="nc">.mango</span><span class="p">{</span>
+	<span class="nl">background</span><span class="p">:</span> <span class="sx">url("/images/mango.png")</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+<h3 id="반복문---each---list-반복">
+<a class="anchor" href="#%EB%B0%98%EB%B3%B5%EB%AC%B8---each---list-%EB%B0%98%EB%B3%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>반복문 - Each - List 반복</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$fruits</span><span class="p">:</span><span class="n">apple</span><span class="o">,</span> <span class="no">orange</span><span class="o">,</span> <span class="n">banana</span><span class="o">,</span> <span class="n">mango</span><span class="p">;</span>
+
+<span class="nc">.fruits</span><span class="p">{</span>
+	<span class="k">@each</span> <span class="nv">$fruit</span> <span class="n">in</span> <span class="nv">$fruits</span><span class="p">{</span>
+		<span class="c1">//내장함수</span>
+		<span class="nv">$index</span><span class="p">:</span> <span class="nf">index</span><span class="p">(</span><span class="nv">$fruits</span><span class="o">,</span> <span class="nv">$fruit</span><span class="p">);</span>
+		<span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="si">#{</span><span class="n">index</span><span class="si">}</span><span class="o">)</span><span class="p">{</span>
+			<span class="nl">left</span><span class="p">:</span><span class="m">50px</span> <span class="o">*</span> <span class="nv">$index</span><span class="p">;</span>
+			<span class="nt">background</span><span class="nd">:url</span><span class="o">(</span><span class="s2">"/images/</span><span class="si">#{</span><span class="nv">$fruit</span><span class="si">}</span><span class="s2">.png"</span><span class="o">)</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></div>
 <hr>
 
