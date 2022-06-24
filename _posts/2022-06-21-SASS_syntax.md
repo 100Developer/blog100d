@@ -796,3 +796,123 @@ div{
 	
 ```
 ---
+
+### 반복문 - For 
+
+> for문과 유사합니다.
+> @for는 through를 사용하는 형식과 to를 사용하는 형식으로 나뉩니다.
+> 두 형식은 종료 조건이 해석되는 방식이 다릅니다.
+
+```scss
+// through
+// 종료 만큼 반복
+@for $변수 from 시작 through 종료{
+	//반복 내용
+}
+
+// to
+// 종료 직전까지 반복
+@for $변수 from 시작 to 종료{
+	//반복 내용
+}
+```
+
+```scss
+// 1부터 3번 반복
+@for $I from 1 through 3{
+	.through:nth-child(#{$i}){
+		width:20px * $i
+	}
+}
+
+// 1부터 3 직전까지만 반복(2번 반복)
+@for $i from 1 to 3{
+	.to:nth-child(#{$i}){
+		width:20px * $i	
+	}
+}
+```
+
+```css
+.through:nth-child(1){
+	width:20px;
+}
+
+.through:nth-child(2){
+	width:40px;
+}
+
+.through:nth-child(3){
+	width:60px;
+}
+
+.to:nth-child(1){
+	width:20px;
+}
+
+.to:nth-child(2){
+	width:40px;
+}
+```
+
+---
+### 반복문 - Each
+
+> @each는 list와 map 데이터를 반복할 때 사용합니다.
+> for in 문과 유사합니다.
+
+```scss
+@each $변수 in 데이터 {
+	//반복 내용
+}
+```
+
+```scss
+//List Data
+$fruits: (apple, orange, banana, mango);
+
+.fruits{
+	@each $fruit in $fruits{
+		li.#{$fruit}{
+			background:url("/images/#{fruit}.png");
+		}
+	}
+}
+```
+
+```css
+.fruits li .apple{
+	background: url("/images/apple.png")
+}
+
+.fruits li .orange{
+	background: url("/images/orange.png")
+}
+
+.fruits li .banana{
+	background: url("/images/banana.png")
+}
+
+.fruits li .mango{
+	background: url("/images/mango.png")
+}
+```
+
+---
+### 반복문 - Each - List 반복
+
+```scss
+$fruits:apple, orange, banana, mango;
+
+.fruits{
+	@each $fruit in $fruits{
+		//내장함수
+		$index: index($fruits, $fruit);
+		li:nth-child(#{index}){
+			left:50px * $index;
+			background:url("/images/#{$fruit}.png");
+		}
+	}
+}
+```
+---
