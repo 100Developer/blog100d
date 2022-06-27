@@ -915,4 +915,59 @@ $fruits:apple, orange, banana, mango;
 	}
 }
 ```
+
+---
+### 반복문 - Each - Map 반복
+
+```scss
+$fruits-data:(
+	apple:korea,
+	orange:china,
+	banana:japan
+);
+@each $fruit, $country in $fruits-data{
+	//내장함수
+	//map-keys($fruits-data) => (apple, orange, banana)
+	//map-values($fruits-data) => (korea, china, japan)
+	$fruits-data--key-list:map-keys($fruits-data);
+	$index: index($fruits-data--key-list, $fruit)
+	.box-#{$fruit}{
+		width:100px * $index;
+		background:url("/images/#{$country}.png");
+	}
+}
+	
+```
+
+---
+### 반복문 - Each - While
+> @while은 조건이 fales로 평가될 때까지 내용을 반복합니다.
+> while 문과 유사하게 잘못된 조건으로 인해 컴파일 중 무한 루프에 빠질 수 있습니다.
+> 사용을 권장하지 않습니다.
+
+
+```scss
+@while 조건{
+	// 반복 내용
+}
+```
+
+
+```scss
+$i:6;
+
+@while $i > 0{
+	.item-#{$i}{
+		width:2px * $i;
+	}
+	$i:$i-2;
+}
+```
+
+
+```css
+	.item-6{width:12px;}
+	.item-4{width:8px;}
+	.item-2{width:4px;}
+```
 ---
